@@ -1,0 +1,6 @@
+0.0: setShooter(12);
+4.0: fireShot();
+9.0: fireShot();
+14.0: fireShot();
+17.0: setShooter(0);
+17.0: return();
