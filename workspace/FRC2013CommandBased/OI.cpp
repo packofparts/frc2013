@@ -1,6 +1,5 @@
 #include "OI.h"
 
-#include "Commands/Climber/ClimbCommand.h"
 #include "Commands/Drive/SetCoastBrakeCommand.h"
 #include "Commands/Drive/ShiftHighCommand.h"
 #include "Commands/Drive/ShiftLowCommand.h"
@@ -10,6 +9,8 @@
 #include "Commands/Launcher/FireShotCommand.h"
 #include "Commands/Launcher/LoadFrisbeeCommand.h"
 #include "Commands/Launcher/UnjamLoaderCommand.h"
+#include "Commands/Blocker/BlockerDownCommand.h"
+#include "Commands/Blocker/BlockerUpCommand.h"
 
 #include "etc/JoystickAxisButton.h"
 
@@ -59,12 +60,13 @@ OI::OI()
 	btnUnjam = new JoystickButton(joystickGameMech, JOYSTICK_BUTTON_UNJAM);
 	btnUnjam->WhenPressed(new UnjamLoaderCommand());
 	
-	// Tip into the wall, prepare for climb.  Start a new ClimbCommand, which interrupts the TankDriveCommand
-	btnBeginClimb = new JoystickButton(joystickGameMech, JOYSTICK_BUTTON_TIP);
-	btnBeginClimb->WhenPressed(new ClimbCommand());
-	// Tip away from the wall, reset to driving.  We do this by interrupting the ClimbCommand
-	btnEndClimb = new JoystickButton(joystickGameMech, JOYSTICK_BUTTON_UNTIP);
-	btnEndClimb->WhenPressed(new TankDriveCommand());
+	
+	// Put the blocker up
+	btnBlockUp = new JoystickButton(joystickGameMech, JOYSTICK_BUTTON_BLOCK);
+	btnBlockUp->WhenPressed(new BlockerUpCommand());
+	// Put the blocker down
+	btnBlockDown = new JoystickButton(joystickGameMech, JOYSTICK_BUTTON_UNBLOCK);
+	btnBlockDown->WhenPressed(new BlockerDownCommand());
 }
 
 float OI::GetStickLeftY()
@@ -82,24 +84,4 @@ float OI::GetThrottle()
 	// Scale from [1, -1] to [0, 1]
 	//return (joystickDriveRight->GetAxis(Joystick::kThrottleAxis) - 1) / -2;
 	return 1.0;
-}
-
-bool OI::GetLeftClimbUp()
-{
-	return joystickDriveRight->GetRawButton(7);
-}
-
-bool OI::GetRightClimbUp()
-{
-	return joystickDriveRight->GetRawButton(10);
-}
-
-bool OI::GetLeftClimbDown()
-{
-	return joystickDriveRight->GetRawButton(6);
-}
-
-bool OI::GetRightClimbDown()
-{
-	return joystickDriveRight->GetRawButton(11);	
 }

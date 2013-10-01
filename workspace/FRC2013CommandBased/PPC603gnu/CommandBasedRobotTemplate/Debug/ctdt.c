@@ -11,8 +11,6 @@ void _GLOBAL__I__Z20FRC_userClassFactoryv();
 
 void _GLOBAL__I__ZN11CommandBaseC2EPKc();
 
-void _GLOBAL__I__ZN12ClimbCommandC2Ev();
-
 void _GLOBAL__I__ZN13FrisbeeLoaderC2Ev();
 
 void _GLOBAL__I__ZN13GyroSubsystemC2Ev();
@@ -25,7 +23,9 @@ void _GLOBAL__I__ZN15FrisbeeLauncherC2Ev();
 
 void _GLOBAL__I__ZN15ShiftLowCommandC2Ev();
 
-void _GLOBAL__I__ZN16ClimberSubsystemC2Ev();
+void _GLOBAL__I__ZN16BlockerSubsystemC2Ev();
+
+void _GLOBAL__I__ZN16BlockerUpCommandC2Ev();
 
 void _GLOBAL__I__ZN16ShiftHighCommandC2Ev();
 
@@ -36,6 +36,8 @@ void _GLOBAL__I__ZN17AutonomousCommandC2EPKc();
 void _GLOBAL__I__ZN17GyroRotateCommandC2Ev();
 
 void _GLOBAL__I__ZN17ScriptInterpreterC2Ev();
+
+void _GLOBAL__I__ZN18BlockerDownCommandC2Ev();
 
 void _GLOBAL__I__ZN18LoadFrisbeeCommandC2Ev();
 
@@ -106,19 +108,20 @@ void (*_ctors[])() =
     {
     _GLOBAL__I__Z20FRC_userClassFactoryv,
     _GLOBAL__I__ZN11CommandBaseC2EPKc,
-    _GLOBAL__I__ZN12ClimbCommandC2Ev,
     _GLOBAL__I__ZN13FrisbeeLoaderC2Ev,
     _GLOBAL__I__ZN13GyroSubsystemC2Ev,
     _GLOBAL__I__ZN14DriveSubsystemC2Ev,
     _GLOBAL__I__ZN15FireShotCommandC2Ev,
     _GLOBAL__I__ZN15FrisbeeLauncherC2Ev,
     _GLOBAL__I__ZN15ShiftLowCommandC2Ev,
-    _GLOBAL__I__ZN16ClimberSubsystemC2Ev,
+    _GLOBAL__I__ZN16BlockerSubsystemC2Ev,
+    _GLOBAL__I__ZN16BlockerUpCommandC2Ev,
     _GLOBAL__I__ZN16ShiftHighCommandC2Ev,
     _GLOBAL__I__ZN16TankDriveCommandC2Ev,
     _GLOBAL__I__ZN17AutonomousCommandC2EPKc,
     _GLOBAL__I__ZN17GyroRotateCommandC2Ev,
     _GLOBAL__I__ZN17ScriptInterpreterC2Ev,
+    _GLOBAL__I__ZN18BlockerDownCommandC2Ev,
     _GLOBAL__I__ZN18LoadFrisbeeCommandC2Ev,
     _GLOBAL__I__ZN18UnjamLoaderCommandC2Ev,
     _GLOBAL__I__ZN19StopLauncherCommandC2Ev,
@@ -158,8 +161,6 @@ void _GLOBAL__D__Z20FRC_userClassFactoryv();
 
 void _GLOBAL__D__ZN11CommandBaseC2EPKc();
 
-void _GLOBAL__D__ZN12ClimbCommandC2Ev();
-
 void _GLOBAL__D__ZN13FrisbeeLoaderC2Ev();
 
 void _GLOBAL__D__ZN13GyroSubsystemC2Ev();
@@ -172,7 +173,9 @@ void _GLOBAL__D__ZN15FrisbeeLauncherC2Ev();
 
 void _GLOBAL__D__ZN15ShiftLowCommandC2Ev();
 
-void _GLOBAL__D__ZN16ClimberSubsystemC2Ev();
+void _GLOBAL__D__ZN16BlockerSubsystemC2Ev();
+
+void _GLOBAL__D__ZN16BlockerUpCommandC2Ev();
 
 void _GLOBAL__D__ZN16ShiftHighCommandC2Ev();
 
@@ -183,6 +186,8 @@ void _GLOBAL__D__ZN17AutonomousCommandC2EPKc();
 void _GLOBAL__D__ZN17GyroRotateCommandC2Ev();
 
 void _GLOBAL__D__ZN17ScriptInterpreterC2Ev();
+
+void _GLOBAL__D__ZN18BlockerDownCommandC2Ev();
 
 void _GLOBAL__D__ZN18LoadFrisbeeCommandC2Ev();
 
@@ -243,19 +248,20 @@ void (*_dtors[])() =
     {
     _GLOBAL__D__Z20FRC_userClassFactoryv,
     _GLOBAL__D__ZN11CommandBaseC2EPKc,
-    _GLOBAL__D__ZN12ClimbCommandC2Ev,
     _GLOBAL__D__ZN13FrisbeeLoaderC2Ev,
     _GLOBAL__D__ZN13GyroSubsystemC2Ev,
     _GLOBAL__D__ZN14DriveSubsystemC2Ev,
     _GLOBAL__D__ZN15FireShotCommandC2Ev,
     _GLOBAL__D__ZN15FrisbeeLauncherC2Ev,
     _GLOBAL__D__ZN15ShiftLowCommandC2Ev,
-    _GLOBAL__D__ZN16ClimberSubsystemC2Ev,
+    _GLOBAL__D__ZN16BlockerSubsystemC2Ev,
+    _GLOBAL__D__ZN16BlockerUpCommandC2Ev,
     _GLOBAL__D__ZN16ShiftHighCommandC2Ev,
     _GLOBAL__D__ZN16TankDriveCommandC2Ev,
     _GLOBAL__D__ZN17AutonomousCommandC2EPKc,
     _GLOBAL__D__ZN17GyroRotateCommandC2Ev,
     _GLOBAL__D__ZN17ScriptInterpreterC2Ev,
+    _GLOBAL__D__ZN18BlockerDownCommandC2Ev,
     _GLOBAL__D__ZN18LoadFrisbeeCommandC2Ev,
     _GLOBAL__D__ZN18UnjamLoaderCommandC2Ev,
     _GLOBAL__D__ZN19StopLauncherCommandC2Ev,
