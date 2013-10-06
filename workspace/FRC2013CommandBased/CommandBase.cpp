@@ -15,7 +15,7 @@ FrisbeeLauncher* CommandBase::launcher = NULL;
 FrisbeeLoader* CommandBase::loader = NULL;
 DriveSubsystem* CommandBase::drive = NULL;
 GyroSubsystem* CommandBase::gyro = NULL;
-ClimberSubsystem* CommandBase::climber = NULL;
+BlockerSubsystem* CommandBase::blocker = NULL;
 
 OI* CommandBase::oi = NULL;
 
@@ -27,7 +27,7 @@ void CommandBase::init()
 	loader = new FrisbeeLoader();
 	drive = new DriveSubsystem();
 	gyro = new GyroSubsystem();
-	climber = new ClimberSubsystem();
-
+	blocker = new BlockerSubsystem();
+	
 	oi = new OI();
 }

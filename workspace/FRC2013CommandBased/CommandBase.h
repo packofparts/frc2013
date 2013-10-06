@@ -2,7 +2,7 @@
 #define COMMAND_BASE_H
 
 #include "Commands/Command.h"
-#include "Subsystems/ClimberSubsystem.h"
+#include "Subsystems/BlockerSubsystem.h"
 #include "Subsystems/DriveSubsystem.h"
 #include "Subsystems/FrisbeeLauncher.h"
 #include "Subsystems/FrisbeeLoader.h"
@@ -27,7 +27,7 @@ public:
 	
 	static FrisbeeLauncher* launcher;
 	static FrisbeeLoader* loader;
-	static ClimberSubsystem* climber;
+	static BlockerSubsystem* blocker;
 	
 	static GyroSubsystem* gyro;
 	
