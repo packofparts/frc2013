@@ -32,7 +32,7 @@ MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
 WS_ROOT_DIR := C:/Users/Matthew/SkyDrive/Documents/WindRiver
-PRJ_ROOT_DIR := C:/Users/Matthew/SkyDrive/Documents/GitHub/frc2013/workspace/FRC2013CommandBased
+PRJ_ROOT_DIR := C:/Users/Matthew/FRC2013/workspace/FRC2013CommandBased
 
 
 
@@ -174,11 +174,7 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/C
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Blocker/BlockerDownCommand.o : $(PRJ_ROOT_DIR)/Commands/Blocker/BlockerDownCommand.cpp $(FORCE_FILE_BUILD)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
-
-
-CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Blocker/BlockerUpCommand.o : $(PRJ_ROOT_DIR)/Commands/Blocker/BlockerUpCommand.cpp $(FORCE_FILE_BUILD)
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Climber/ClimbCommand.o : $(PRJ_ROOT_DIR)/Commands/Climber/ClimbCommand.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -238,7 +234,7 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/S
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/BlockerSubsystem.o : $(PRJ_ROOT_DIR)/Subsystems/BlockerSubsystem.cpp $(FORCE_FILE_BUILD)
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/ClimberSubsystem.o : $(PRJ_ROOT_DIR)/Subsystems/ClimberSubsystem.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -269,8 +265,7 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/l
 OBJECTS_CommandBasedRobotTemplate_partialImage = CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/CommandBase.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/CommandBasedRobot.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Autonomous/AutonomousCommand.o \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Blocker/BlockerDownCommand.o \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Blocker/BlockerUpCommand.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Climber/ClimbCommand.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ClosedLoop/GyroRotateCommand.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/SetCoastBrakeCommand.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ShiftHighCommand.o \
@@ -285,7 +280,7 @@ OBJECTS_CommandBasedRobotTemplate_partialImage = CommandBasedRobotTemplate_parti
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/OI.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/ScriptParser/ScriptInterpreter.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/ScriptParser/ScriptScanner.o \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/BlockerSubsystem.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/ClimberSubsystem.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/DriveSubsystem.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/FrisbeeLauncher.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/FrisbeeLoader.o \
@@ -306,14 +301,14 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/CommandBasedRobotTemplate_par
 force : 
 
 DEP_FILES := CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/CommandBase.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/CommandBasedRobot.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Autonomous/AutonomousCommand.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Blocker/BlockerDownCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Blocker/BlockerUpCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ClosedLoop/GyroRotateCommand.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/SetCoastBrakeCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ShiftHighCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ShiftLowCommand.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/TankDriveCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/FeedUntilPressStateCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/FireShotCommand.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/LauncherMotors/StartLauncherCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/LauncherMotors/StopLauncherCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/LoadFrisbeeCommand.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/UnjamLoaderCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/OI.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/ScriptParser/ScriptInterpreter.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/ScriptParser/ScriptScanner.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/BlockerSubsystem.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/DriveSubsystem.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/FrisbeeLauncher.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/FrisbeeLoader.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/GyroSubsystem.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/etc/JoystickAxisButton.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/logging.d
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Climber/ClimbCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ClosedLoop/GyroRotateCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/SetCoastBrakeCommand.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ShiftHighCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/ShiftLowCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Drive/TankDriveCommand.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/FeedUntilPressStateCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/FireShotCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/LauncherMotors/StartLauncherCommand.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/LauncherMotors/StopLauncherCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/LoadFrisbeeCommand.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Commands/Launcher/UnjamLoaderCommand.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/OI.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/ScriptParser/ScriptInterpreter.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/ScriptParser/ScriptScanner.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/ClimberSubsystem.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/DriveSubsystem.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/FrisbeeLauncher.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/FrisbeeLoader.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/Subsystems/GyroSubsystem.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/etc/JoystickAxisButton.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/FRC2013CommandBased/logging.d
 -include $(DEP_FILES)
 
 

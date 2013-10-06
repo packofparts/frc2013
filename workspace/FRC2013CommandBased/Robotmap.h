@@ -43,9 +43,9 @@
 #define JOYSTICK_BUTTON_STOP_LAUNCHER 4
 #define JOYSTICK_BUTTON_INIT_SHOT 1
 #define JOYSTICK_BUTTON_UNJAM 8
+#define JOYSTICK_BUTTON_TIP 9
+#define JOYSTICK_BUTTON_UNTIP 7
 
-#define JOYSTICK_BUTTON_BLOCK 9
-#define JOYSTICK_BUTTON_UNBLOCK 7
 
 //  #####   #######  #     #   #####   #######  ######    #####  
 // #     #  #        ##    #  #     #  #     #  #     #  #     # 
@@ -73,6 +73,8 @@
 
 #define MOTOR_LAUNCHER_STAGE_1 4
 #define MOTOR_LAUNCHER_STAGE_2 5
+#define MOTOR_CLIMBER_LEFT 6
+#define MOTOR_CLIMBER_RIGHT 7
 
 #define MOTOR_FEEDER 8
 
@@ -80,8 +82,9 @@
 // This is the solenoid channel that pushes the frisbee into the wheels
 #define SOLENOID_FEEDER 2
 
-#define SOLENOID_BLOCKER_LOWER 3
-#define SOLENOID_BLOCKER_UPPER 4
+#define SOLENOID_CLIMBER_ARMS 3
+#define SOLENOID_TIP 4
+
 
 
 #define COMPRESSOR_SPIKE 8

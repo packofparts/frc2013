@@ -41,6 +41,8 @@ public:
 
 FireShotCommand::FireShotCommand()
 {
+	//this->SetTimeout(1.1);
+
 	AddSequential(new FireShotEngageCommand(0.5, true)); // Pusher out
 	AddSequential(new FireShotEngageCommand(0.5, false)); // Pusher in
 	AddSequential(new LoadFrisbeeCommand());
