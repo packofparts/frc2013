@@ -32,19 +32,15 @@ private:
 	JoystickButton* btnUnjam;
 	
 	// **************************************
-	// *************** Climber **************
+	// *************** Blocker **************
 	// **************************************
-	JoystickButton* btnBeginClimb;
-	JoystickButton* btnEndClimb;
+	JoystickButton* btnBlockUp;
+	JoystickButton* btnBlockDown;
 public:
 	OI();
 	float GetStickLeftY();
 	float GetStickRightY();
 	float GetThrottle();
-	bool GetLeftClimbUp();
-	bool GetLeftClimbDown();
-	bool GetRightClimbUp();
-	bool GetRightClimbDown();
 };
 
 #endif

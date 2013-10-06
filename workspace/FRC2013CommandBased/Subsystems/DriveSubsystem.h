@@ -12,8 +12,6 @@
  */
 class DriveSubsystem: public Subsystem {
 private:
-	// It's desirable that everything possible under private except
-	// for methods that implement subsystem capabilities
 	RobotDrive* drive;
 	CANJaguar* motorLeft;
 	CANJaguar* motorRight;
